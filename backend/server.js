@@ -7,7 +7,7 @@ const serviceAccount = require("./firebase-key.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://pirsensor-d61b4-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    databaseURL: "Your_DB-URL"
 });
 
 const db = admin.database();
@@ -17,7 +17,7 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-const API_KEY = "3e9f76da11714650f7b6f748d406a162"; // Replace with your actual API key
+const API_KEY = "Your_OpenWheather_api-key"; // Replace with your actual API key
 const locationCache = new Map(); // Cache for location data
 const weatherCache = new Map();  // Cache for weather data
 
